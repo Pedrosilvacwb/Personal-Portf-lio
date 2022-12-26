@@ -5,8 +5,9 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 40px 0;
-  margin-bottom: 80px;
-
+  opacity: 0;
+  transform: translateY(-30%);
+  animation: appearTop 0.6s forwards;
   h1 {
     font-size: 48px;
     font-weight: bold;
