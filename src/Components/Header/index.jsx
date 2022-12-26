@@ -6,7 +6,10 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 const Header = () => {
-  const { ref: headerRef, inView } = useInView();
+  const { ref: headerRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
   return (
     <Container>
       <StyledHeader className={inView ? 'animeDown' : ''} ref={headerRef}>

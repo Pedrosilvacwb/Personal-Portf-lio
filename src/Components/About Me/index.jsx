@@ -5,10 +5,14 @@ import Img from '../../Assets/pedro_23_12_22_ (1).jpg';
 import { useInView } from 'react-intersection-observer';
 import CV from '../../Assets/Cv/Cv - Pedro Cardozo e Silva (1).pdf';
 const AboutMe = () => {
-  const { ref: aboutRef, inView } = useInView();
+  const { ref: aboutRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <Container>
-      <About className="animeUp">
+      <About ref={aboutRef} className={inView ? 'animeUp' : ''}>
         <div>
           <img src={Img} alt="" />
         </div>
