@@ -1,13 +1,19 @@
 import React from 'react';
 import { Hero } from './style';
-import { Container, Slide } from '@mui/material';
+import { Container } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
 import Perfil from '../../Assets/cinza_3_crop.jpg';
 
 const HeroSection = () => {
+  const { ref: heroRef, inView } = useInView();
+
   return (
     <Container>
       <Hero>
-        <div className="text-area">
+        <div
+          ref={heroRef}
+          className={`text-area ${inView ? 'animeRight' : ''}`}
+        >
           <span className="tag">Full-Stack Developer</span>
           <h1>
             <span className="green">&#60;</span>Olá Mundo! Me chamo{' '}

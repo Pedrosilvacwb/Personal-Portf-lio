@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   padding: 40px 0;
   opacity: 0;
   transform: translateY(-30%);
-  animation: appearTop 0.6s forwards;
+
   h1 {
     font-size: 48px;
     font-weight: bold;
