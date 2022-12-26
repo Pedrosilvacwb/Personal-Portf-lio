@@ -3,11 +3,13 @@ import { Container, Slide } from '@mui/material';
 import { StyledHeader } from './style';
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 
 const Header = () => {
+  const { ref: headerRef, inView } = useInView();
   return (
     <Container>
-      <StyledHeader>
+      <StyledHeader className={inView ? 'animeDown' : ''} ref={headerRef}>
         <h1>
           Pedro <span>Silva</span>
         </h1>

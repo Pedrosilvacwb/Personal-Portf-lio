@@ -10,7 +10,6 @@ export const Hero = styled.div`
   .text-area {
     opacity: 0;
     transform: translateX(-30%);
-    animation: appearRight 0.6s forwards;
     display: flex;
     flex-direction: column;
     gap: 40px;

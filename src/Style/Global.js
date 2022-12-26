@@ -23,8 +23,16 @@ export const Global = createGlobalStyle`
   .green{
     color:var(--color-primary)
   }
-  
-  @keyframes appearTop {
+  .animeRight {
+    animation: appearRight .6s forwards;
+  }
+  .animeDown {
+    animation: appearDown .6s forwards;
+  }
+  .animeUp {
+    animation: appearUp .6s forwards;
+  }
+  @keyframes appearDown {
     to {
       opacity: 1;
       transform: translateY(0);
@@ -35,6 +43,12 @@ export const Global = createGlobalStyle`
     to{
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  @keyframes appearUp {
+    to{
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   `;
