@@ -20,4 +20,21 @@ export const Global = createGlobalStyle`
   .AppBody{
     background: var(--color-gray800)
   }
+  .green{
+    color:var(--color-primary)
+  }
+  
+  @keyframes appearTop {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes appearRight {
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
   `;
