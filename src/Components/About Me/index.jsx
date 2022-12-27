@@ -5,10 +5,14 @@ import Img from '../../Assets/pedro_23_12_22_ (1).jpg';
 import { useInView } from 'react-intersection-observer';
 import CV from '../../Assets/Cv/Cv - Pedro Cardozo e Silva (1).pdf';
 const AboutMe = () => {
-  const { ref: aboutRef, inView } = useInView();
+  const { ref: aboutRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <Container>
-      <About className="animeUp">
+      <About id="About" className={inView ? 'animeUp' : ''}>
         <div>
           <img src={Img} alt="" />
         </div>
@@ -17,7 +21,7 @@ const AboutMe = () => {
             <span className="green">&#60;</span>Sobre Mim
             <span className="green">/&#62;</span>
           </h2>
-          <p>
+          <p ref={aboutRef}>
             Natural de <span className="gren">Curitiba</span>, atuei durante 10
             anos como chef de cozinha em diversos restaurantes do Brasil e no
             exterior.

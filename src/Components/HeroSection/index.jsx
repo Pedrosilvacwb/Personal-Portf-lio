@@ -5,7 +5,10 @@ import { useInView } from 'react-intersection-observer';
 import Perfil from '../../Assets/cinza_3_crop.jpg';
 
 const HeroSection = () => {
-  const { ref: heroRef, inView } = useInView();
+  const { ref: heroRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
 
   return (
     <Container>

@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Techs = styled.div`
-  padding: 40px 0;
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(30%);
+  background: var(--color-gray900);
 
   h2 {
     text-align: center;
@@ -13,9 +16,35 @@ export const Techs = styled.div`
   }
 
   .techsBtn {
-    width: 30%;
+    width: 50%;
     height: 100px;
     color: var(--color-black);
     border: 1px solid var(--color-gray-);
+  }
+
+  .techList {
+    margin-top: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    position: relative;
+  }
+  .techList li {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  .techList li img {
+    width: 80px;
+    height: 80px;
+  }
+  hr {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background: var(--color-primary);
+    border: none;
   }
 `;

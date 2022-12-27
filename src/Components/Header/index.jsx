@@ -4,9 +4,13 @@ import { StyledHeader } from './style';
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-scroll';
 
 const Header = () => {
-  const { ref: headerRef, inView } = useInView();
+  const { ref: headerRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
   return (
     <Container>
       <StyledHeader className={inView ? 'animeDown' : ''} ref={headerRef}>
@@ -17,24 +21,24 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="">
+              <Link to="About" spy={true} smooth={true} duration={600}>
                 <span>&#60;</span>Sobre<span>/&#62;</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="Technologies" spy={true} smooth={true} duration={600}>
                 <span>&#60;</span>Experiencias<span>/&#62;</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="Projects" spy={true} smooth={true} duration={800}>
                 <span>&#60;</span>Projetos<span>/&#62;</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="Contact" spy={true} smooth={true} duration={900}>
                 <span>&#60;</span>Contato<span>/&#62;</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -42,12 +46,20 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/in/pedrosilvacwb/"
+              >
                 <FaLinkedinIn />
               </a>
             </li>
             <li>
-              <a href="">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/Pedrosilvacwb"
+              >
                 <BsGithub />
               </a>
             </li>
