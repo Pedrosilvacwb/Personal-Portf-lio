@@ -1,7 +1,9 @@
 import React from 'react';
 import AboutMe from './Components/About Me';
+import Contact from './Components/Contact';
 import Header from './Components/Header';
 import HeroSection from './Components/HeroSection';
+import Projects from './Components/Projects';
 import Technologies from './Components/Technologies';
 
 const App = () => {
@@ -11,6 +13,8 @@ const App = () => {
       <HeroSection />
       <AboutMe />
       <Technologies />
+      <Projects />
+      <Contact />
     </div>
   );
 };

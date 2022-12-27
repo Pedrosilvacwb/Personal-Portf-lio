@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Techs = styled.div`
-  padding: 40px 0;
+  padding: 80px 0;
   opacity: 0;
   transform: translateY(30%);
+  background: var(--color-gray900);
 
   h2 {
     text-align: center;

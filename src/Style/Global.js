@@ -32,6 +32,9 @@ export const Global = createGlobalStyle`
   .animeUp {
     animation: appearUp .6s forwards;
   }
+  .animeLeft {
+    animation: appearLeft .6s forwards;
+  }
   @keyframes appearDown {
     to {
       opacity: 1;
@@ -46,6 +49,12 @@ export const Global = createGlobalStyle`
     }
   }
   @keyframes appearUp {
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes appearLeft {
     to{
       opacity: 1;
       transform: translateY(0);

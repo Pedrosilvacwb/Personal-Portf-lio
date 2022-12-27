@@ -27,6 +27,7 @@ export const StyledHeader = styled.header`
     font-size: 20px;
     color: var(--color-white);
     font-weight: 600;
+    cursor: pointer;
   }
   ul li a span {
     opacity: 0;

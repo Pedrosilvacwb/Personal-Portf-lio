@@ -17,9 +17,12 @@ const Technologies = () => {
     setValue(newValue);
   };
   return (
-    <Container>
-      <Techs className={inView ? 'animeUp' : ''}>
-        <h2 ref={techRef}>Tecnologias</h2>
+    <Techs id="Technologies" className={inView ? 'animeUp' : ''}>
+      <Container>
+        <h2 ref={techRef}>
+          <span className="green">&#60;</span>Tecnologias
+          <span className="green">/&#62;</span>
+        </h2>
         <TabContext value={value}>
           <div>
             <TabList
@@ -75,8 +78,8 @@ const Technologies = () => {
             </TabPanel>
           </div>
         </TabContext>
-      </Techs>
-    </Container>
+      </Container>
+    </Techs>
   );
 };
 
