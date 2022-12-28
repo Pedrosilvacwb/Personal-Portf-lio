@@ -12,7 +12,7 @@ const AboutMe = () => {
 
   return (
     <Container>
-      <About ref={aboutRef} className={inView ? 'animeUp' : ''}>
+      <About id="About" className={inView ? 'animeUp' : ''}>
         <div>
           <img src={Img} alt="" />
         </div>
@@ -21,7 +21,7 @@ const AboutMe = () => {
             <span className="green">&#60;</span>Sobre Mim
             <span className="green">/&#62;</span>
           </h2>
-          <p>
+          <p ref={aboutRef}>
             Natural de <span className="gren">Curitiba</span>, atuei durante 10
             anos como chef de cozinha em diversos restaurantes do Brasil e no
             exterior.

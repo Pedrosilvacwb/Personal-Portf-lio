@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const About = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 40px 0;
+  padding: 80px 0;
   opacity: 0;
   transform: translateY(30%);
 
